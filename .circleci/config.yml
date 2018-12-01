@@ -37,9 +37,9 @@ jobs:
           paths:
             - node_modules
 
-      #- run:
-      #    name: chmod permissions
-      #    command: chmod +x ./scripts/test.js
+      - run:
+          name: chmod permissions
+          command: chmod u+x ./scripts/test.js
 
       - run: 
           name: Tun tests

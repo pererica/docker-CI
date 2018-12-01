@@ -14,8 +14,8 @@ describe('GET /', function(){
 });
 */
 
-const assert = require('assert');
+import { equal } from 'assert';
 
 it('should return true', () => {
-  assert.equal(true, true);
+  equal(true, true);
 });

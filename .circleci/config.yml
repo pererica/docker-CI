@@ -42,7 +42,7 @@ jobs:
           command: chmod u+x ./scripts/test.js
 
       - run: 
-          name: Tun tests
-          command: yarn test
+          name: Run mocha-tests
+          command: yarn mocha-tests
 
 

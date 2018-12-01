@@ -7,12 +7,16 @@
   "author": "Nigel Poulton <nigelpoulton@hotmail.com>",
   "license": "You'd have to be mad to use this in production :-D",
   "scripts": {
-    "test": "scripts/test.js"
+    "test": "scripts/test.",
+    "mocha-tests": "scripts/test.js"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
   },
   "dependencies": {
     "express": "4.16.4",
     "pug": "2.0.3",
-    "mocha": "5.2.0",
+    "mocha": "^5.2.0",
     "supertest": "1.1.0"
   }
 }

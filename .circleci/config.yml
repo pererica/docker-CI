@@ -39,7 +39,7 @@ jobs:
 
       - run:
           name: chmod permissions
-          command: chmod +x ./scripts/test
+          command: chmod +x ./scripts/test.js
 
       - run: 
           name: Tun tests

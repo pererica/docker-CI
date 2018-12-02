@@ -7,8 +7,7 @@
   "author": "Nigel Poulton <nigelpoulton@hotmail.com>",
   "license": "You'd have to be mad to use this in production :-D",
   "scripts": {
-    "test": "./node_modules/.bin/mocha -V",
-    "mocha-tests": "scripts/test.js"
+    "test": "./node_modules/.bin/mocha -V scripts/test.js"
   },
   "devDependencies": {
     "mocha": "^5.2.0"

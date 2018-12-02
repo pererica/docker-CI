@@ -45,4 +45,8 @@ jobs:
           name: Run mocha-tests
           command: yarn test
 
+      - run: 
+          name: Run mocha-tests
+          command: yarn mocha-tests
+
 

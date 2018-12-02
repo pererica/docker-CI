@@ -54,11 +54,9 @@ jobs:
           name: Run mocha-tests
           command: yarn run test
 
-      - deployment:
-          dockerhub:
-            branch: master
-            commands:
-              - $DOCKER_HUB_TRIGGER
+      - deploy:
+          name: Publish application to docker hub
+          command: $DOCKER_HUB_TRIGGER
 
 
 

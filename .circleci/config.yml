@@ -53,7 +53,7 @@ jobs:
       - run: 
           name: Run mocha-tests
           command: yarn run test
-
+          
       - deploy:
           name: Publish application to docker hub
           command: $DOCKER_HUB_TRIGGER

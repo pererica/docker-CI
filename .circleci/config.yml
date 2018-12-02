@@ -14,7 +14,7 @@ jobs:
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
 
-      
+
     working_directory: ~/repo
 
     steps:
@@ -39,8 +39,16 @@ jobs:
             - node_modules
 
       - run:
-          name: chmod permissions
+          name: chmod sh permissions
+          command: chmod -x ./scripts/test
+
+      - run:
+          name: chmod js permissions
           command: chmod u+x ./test/test.js
+
+      - run: 
+          name: Run sh-tests
+          command: yarn ./scripts/test
 
       - run: 
           name: Run mocha-tests

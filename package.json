@@ -7,7 +7,8 @@
   "author": "Per-Eric Andrée <pereric.andree@gmail.com>",
   "license": "No licence",
   "scripts": {
-    "test": "mocha --exit"
+    "test": "mocha --exit",
+    "sh-tests": "test"
   },
   "devDependencies": {
     "mocha": "^5.2.0"

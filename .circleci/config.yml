@@ -39,7 +39,7 @@ jobs:
 
       - run:
           name: chmod permissions
-          command: chmod u+x ./scripts/test.js
+          command: chmod u+x ./test/test.js
 
       - run: 
           name: Run mocha-tests

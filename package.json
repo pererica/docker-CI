@@ -7,7 +7,7 @@
   "author": "Nigel Poulton <nigelpoulton@hotmail.com>",
   "license": "You'd have to be mad to use this in production :-D",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --exit"
   },
   "devDependencies": {
     "mocha": "^5.2.0"

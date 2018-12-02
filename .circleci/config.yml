@@ -40,7 +40,7 @@ jobs:
 
       - run:
           name: chmod sh permissions
-          command: chmod -x ./scripts/test
+          command: chmod +x ./scripts/test
 
       - run:
           name: chmod js permissions

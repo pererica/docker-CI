@@ -30,6 +30,7 @@ jobs:
       - run:
           name: Install Dependencies
           command: yarn install --frozen-lockfile
+          command: npm install mocha -g
 
       - save_cache:
           name: Save Yarn Package Cache

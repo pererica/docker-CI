@@ -48,7 +48,7 @@ jobs:
 
       - run: 
           name: Run sh-tests
-          command: yarn ./scripts/test
+          command: yarn sh-tests
 
       - run: 
           name: Run mocha-tests

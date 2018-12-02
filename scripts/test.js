@@ -1,4 +1,4 @@
-
+#!/usr/bin/env node
 // Simple async test for HTTP 200 response code using supertest
 'use strict';
 

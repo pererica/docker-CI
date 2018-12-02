@@ -28,8 +28,11 @@ jobs:
           - v1-dependencies-
 
       - run:
-          name: Install Dependencies
+          name: Install Dependencies 1
           command: yarn install --frozen-lockfile
+
+      - run:
+          name: Install Dependencies 2          
           command: npm install mocha -g
 
       - save_cache:

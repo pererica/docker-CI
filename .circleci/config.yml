@@ -43,7 +43,7 @@ jobs:
 
       - run: 
           name: Run mocha-tests
-          command: yarn test
-          
+          command: yarn run test
+
 
 

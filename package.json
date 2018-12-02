@@ -1,11 +1,11 @@
 {
-  "name": "hello-pluralsighters",
+  "name": "testgithubcirclecidocker",
   "private": true,
   "version": "0.0.1",
-  "description": "Demo app for Pluralsight Docker CI course",
+  "description": "CI/CD workflow with Docker Hub - Test of GitHub - CircleCI - Docker",
   "main": "app.js",
-  "author": "Nigel Poulton <nigelpoulton@hotmail.com>",
-  "license": "You'd have to be mad to use this in production :-D",
+  "author": "Per-Eric Andrée <pereric.andree@gmail.com>",
+  "license": "No licence",
   "scripts": {
     "test": "mocha --exit"
   },

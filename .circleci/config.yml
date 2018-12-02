@@ -56,7 +56,7 @@ jobs:
 
       - deploy:
           name: Publish application to docker hub
-          command:  docker push $DOCKER_HUB_USER_ID/dockerapp:latest
+          command: $DOCKER_HUB_TRIGGER
 
 
 

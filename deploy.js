@@ -9,7 +9,7 @@ var headers = {
 };
 
 //var dataString = `{"docker_tag": "${process.env.CIRCLE_BRANCH}"}`;
-var dataString = '{"build":true}';
+var dataString = `{"docker_tag": "master`;
 
 var options = {
   //url: 'https://registry.hub.docker.com/u/pereric/' + project + '/trigger/' + token + '/',

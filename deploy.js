@@ -5,11 +5,11 @@ var request = require('request');
 //var token = process.env.DOCKER_HUB_TOKEN;
 
 var headers = {
-  'Content-Type': 'application/json'
+  'Content-Type':'application/json'
 };
 
 //var dataString = `{"docker_tag": "${process.env.CIRCLE_BRANCH}"}`;
-var dataString = `{"docker_tag": "master"}`;
+var dataString = '{"build":true}';
 
 var options = {
   //url: 'https://registry.hub.docker.com/u/pereric/' + project + '/trigger/' + token + '/',

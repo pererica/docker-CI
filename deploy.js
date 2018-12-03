@@ -24,3 +24,5 @@ function callback(error, response, body) {
     console.log(body);
   }
 }
+
+request(options, callback);

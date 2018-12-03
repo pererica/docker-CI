@@ -27,7 +27,7 @@ jobs:
           - v1-dependencies-{{ checksum "package.json" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
-          
+
       - run:
           name: Install Dependencies 1
           command: yarn install --frozen-lockfile
@@ -53,9 +53,9 @@ jobs:
       - run: 
           name: Run mocha-tests
           command: yarn run test
-          
+
       - deploy:
           name: Publish application to docker hub
-          branch: master
-          command: $DOCKER_HUB_TRIGGER
+          command: npm run deploy
+
 

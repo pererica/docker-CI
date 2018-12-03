@@ -8,7 +8,8 @@
   "license": "No licence",
   "scripts": {
     "test": "mocha --exit",
-    "sh-tests": "scripts/test"
+    "sh-tests": "scripts/test",
+    "deploy": "node deploy.js"
   },
   "devDependencies": {
     "mocha": "^5.2.0"

@@ -7,8 +7,9 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:10.14 
-      
+      #- image: circleci/node:10.14 
+      - image: docker:17.05.0-ce-git
+
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
@@ -16,9 +17,6 @@ jobs:
 
 
     working_directory: ~/repo
-
-    docker:
-      - image: docker:17.05.0-ce-git
       
     steps:
       - checkout

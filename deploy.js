@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var request = require('request');
 
 //var project = process.env.CIRCLE_PROJECT_REPONAME;

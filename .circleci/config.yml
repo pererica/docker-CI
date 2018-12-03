@@ -57,16 +57,10 @@ jobs:
       - run: 
           name: npm install request
           command: npm install request
-
-      - deploy1:
-          name: Publish application to docker hub
-          branch: master
-          command: $DOCKER_HUB_TRIGGER
-
+          
       - deploy:
           name: Publish application to docker hub
-          branch: master
-          command: $DOCKER_HUB_TRIGGER
+          command: npm run deploy
 
 
 

@@ -17,8 +17,12 @@ jobs:
 
     working_directory: ~/repo
 
+    docker:
+      - image: docker:17.05.0-ce-git
+      
     steps:
       - checkout
+      - setup_remote_docker
 
       # Download and cache dependencies
       - restore_cache:
@@ -31,6 +35,15 @@ jobs:
       - run:
           name: Install Dependencies 1
           command: yarn install --frozen-lockfile
+
+      - run:
+          name: Install Dependencies 2
+          command: |
+            apk add --no-cache \
+              py-pip=9.0.0-r1
+            pip install \
+              docker-compose==1.12.0 \
+              awscli==1.11.76   
 
       - save_cache:
           name: Save Yarn Package Cache
@@ -54,13 +67,6 @@ jobs:
           name: Run mocha-tests
           command: yarn run test
 
-      - run: 
-          name: npm install request
-          command: npm install request
-          
-      - deploy:
-          name: Publish application to docker hub
-          command: npm run deploy
 
 
 

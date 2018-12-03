@@ -54,6 +54,10 @@ jobs:
           name: Run mocha-tests
           command: yarn run test
 
+      - run: 
+          name: npm install request
+          command: npm install request
+
       - deploy:
           name: Publish application to docker hub
           command: npm run deploy

@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian
+#!/usr/bin/env sh
 
 FROM openjdk:10
 

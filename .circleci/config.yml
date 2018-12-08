@@ -23,18 +23,18 @@ jobs:
           exclusive: true
 
       - run:
-          name: Installing curl
+          name: This creates a Docker image, which we’re going to tag using -t so it has a friendly name.
           command: docker build -t friendlyhello .
 
       #- run:
       #    name: Installing curl
       #    command: apk update && apk add curl curl-dev bash
 
-      #- run:
-      #    name: Connect to Docker Hub
-      #    command: docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_PASSWORD"
+      - run:
+          name: Connect to Docker Hub
+          command: docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_PASSWORD"
 
-      #- deploy:
-      #    name: Publish application to docker hub
-      #    branch: master
-      #    command: $DOCKER_HUB_TRIGGER
+      - deploy:
+          name: Publish application to docker hub
+          branch: master
+          command: $DOCKER_HUB_TRIGGER

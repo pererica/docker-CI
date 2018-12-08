@@ -14,6 +14,8 @@ jobs:
       # primary container will be configured to use it. Then, any docker-related commands you use
       #will be safely executed in this new environment.
       - setup_remote_docker:
+          reusable: true
+          exclusive: true
 
       - run:
           name: Prepare qemu 

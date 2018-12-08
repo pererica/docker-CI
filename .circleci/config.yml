@@ -3,9 +3,9 @@ jobs:
   build:
     # Actually, this `docker` keyword means your CircleCI build will be launched in a docker
     # container instead of a Linux VM.
-    machine: true # Use a Linux VM instead of docker environment.
-    #docker:      
-    #  - image: docker:stable-git #circleci/node:7.10 # Specify the version you desire here.  
+    #machine: true # Use a Linux VM instead of docker environment.
+    docker:      
+      - image: docker:stable-git #circleci/node:7.10 # Specify the version you desire here.  
     #working_directory: ~/repo # Default working directory, where your project will be cloned  .
     steps:
       - checkout # Add a checkout of the repository.

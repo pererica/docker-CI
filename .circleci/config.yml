@@ -21,11 +21,15 @@ jobs:
       - setup_remote_docker:
           reusable: true
           exclusive: true
+
+      - run:
+          name: Connect to Docker Hub
+          command: apk update && apk add curl curl-dev bash
+
       #    version: 17.05.0-ce
       - run:
           name: Connect to Docker Hub
-          command: |
-            docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_PASSWORD"
+          command: docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_PASSWORD"
 
       - deploy:
           name: Publish application to docker hub

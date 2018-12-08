@@ -36,4 +36,4 @@ jobs:
 
       - deploy:
           name: Publish application to docker hub
-          command: docker push circleci/cci-demo-docker-primary:0.0.1
+          command: docker push pereric/docker-ci:0.0.1

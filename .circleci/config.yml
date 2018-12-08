@@ -17,7 +17,10 @@ jobs:
       #- setup_remote_docker:
       #    version: 17.05.0-ce
 
-      - run: docker-compose up -d # Docker-compose is by default installed on the Linux VM provided by CircleCI. We can directly build and up our containers.
+      # Docker-compose is by default installed on the Linux VM provided by CircleCI. We can directly
+      # build and up our containers.
+      - run: docker-compose up -d 
+
       # Now you can install the dependencies of your project. Here we have node (yarn) and PHP (composer) dependencies.
       - run: docker-compose exec php composer install -n --prefer-dist
       - run: docker-compose run --rm front yarn install

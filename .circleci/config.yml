@@ -28,5 +28,5 @@ jobs:
 
       - deploy:
           name: Publish application to docker hub
-          docker push pereric/iprincipnufinance:latest
+          command: docker push pereric/iprincipnufinance:latest
           #command: docker push pereric/docker-ci:0.0.1

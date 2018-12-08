@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: /app
     docker:
-      - image: circleci:python:2.7.14
+      - image: docker:stable-git
     steps:
       - checkout
       - setup_remote_docker:

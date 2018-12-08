@@ -19,7 +19,7 @@ jobs:
 
       - run:
           name: This creates a Docker image, which we’re going to tag using -t so it has a friendly name.
-          command: docker build -t pereric/iprincipnufinance:latest Dockerfile.armhf  .
+          command: docker build -t pereric/iprincipnufinance:latest -f Dockerfile.armhf  .
 
       - run:
           name: Connect to Docker Hub

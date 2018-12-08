@@ -24,11 +24,11 @@ jobs:
 
       - run:
           name: This creates a Docker image, which we’re going to tag using -t so it has a friendly name.
-          command: docker build -t friendlyhello .
+          command: docker build -t pereric/docker-ci:0.0.1 .
 
-      - run:
-          name: Installing curl
-          command: apk update && apk add curl curl-dev bash
+      #- run:
+      #    name: Installing curl
+      #    command: apk update && apk add curl curl-dev bash
 
       - run:
           name: Connect to Docker Hub
@@ -36,5 +36,4 @@ jobs:
 
       - deploy:
           name: Publish application to docker hub
-          branch: master
-          command: $DOCKER_HUB_TRIGGER
+          command: docker push circleci/cci-demo-docker-primary:0.0.1

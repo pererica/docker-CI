@@ -21,4 +21,4 @@ jobs:
       - run:
           name: Connect to Docker Hub
           command: |
-            docker login -u "$DOCKERHUB_USERNAME" -u "$DOCKERHUB_PASSWORD"
+            docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_PASSWORD"

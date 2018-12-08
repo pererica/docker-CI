@@ -1,3 +1,5 @@
+FROM resin/rpi-raspbian
+
 FROM openjdk:10
 
 WORKDIR /

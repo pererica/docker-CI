@@ -19,7 +19,8 @@ jobs:
 
       - run:
           name: This creates a Docker image, which we’re going to tag using -t so it has a friendly name.
-          command: docker build -t pereric/docker-ci:0.0.1 .
+          command: docker build -t pereric/iprincipnufinance:latest .
+          #command: docker build -t pereric/docker-ci:0.0.1 .
 
       - run:
           name: Connect to Docker Hub
@@ -27,4 +28,5 @@ jobs:
 
       - deploy:
           name: Publish application to docker hub
-          command: docker push pereric/docker-ci:0.0.1
+          docker push pereric/iprincipnufinance:latest
+          #command: docker push pereric/docker-ci:0.0.1

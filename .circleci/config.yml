@@ -9,11 +9,6 @@ jobs:
     #working_directory: ~/repo # Default working directory, where your project will be cloned  .
     steps:
       - checkout # Add a checkout of the repository.
-      # ... steps for building/testing app ...
-
-      #- run
-      #  name: Build Docker image
-      #  command: docker build -t raniazy/bot@CIRCLE_SHA1 . 
 
       # When setup_remote_docker executes, a remote environment will be created, and your current
       # primary container will be configured to use it. Then, any docker-related commands you use
@@ -25,10 +20,6 @@ jobs:
       - run:
           name: This creates a Docker image, which we’re going to tag using -t so it has a friendly name.
           command: docker build -t pereric/docker-ci:0.0.1 .
-
-      #- run:
-      #    name: Installing curl
-      #    command: apk update && apk add curl curl-dev bash
 
       - run:
           name: Connect to Docker Hub

@@ -5,7 +5,7 @@ jobs:
     # container instead of a Linux VM.
     #machine: true # Use a Linux VM instead of docker environment.
     docker:      
-      - image: docker:stable-git #circleci/node:7.10 # Specify the version you desire here.  
+      - image: docker:17.05.0-ce-git #docker:stable-git #circleci/node:7.10 # Specify the version you desire here.  
     #working_directory: ~/repo # Default working directory, where your project will be cloned  .
     steps:
       - checkout # Add a checkout of the repository.
@@ -23,15 +23,18 @@ jobs:
           exclusive: true
 
       - run:
-          name: Connect to Docker Hub
-          command: apk update && apk add curl curl-dev bash
+          name: Installing curl
+          command: docker build -t friendlyhello .
 
-      #    version: 17.05.0-ce
-      - run:
-          name: Connect to Docker Hub
-          command: docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_PASSWORD"
+      #- run:
+      #    name: Installing curl
+      #    command: apk update && apk add curl curl-dev bash
 
-      - deploy:
-          name: Publish application to docker hub
-          branch: master
-          command: $DOCKER_HUB_TRIGGER
+      #- run:
+      #    name: Connect to Docker Hub
+      #    command: docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_PASSWORD"
+
+      #- deploy:
+      #    name: Publish application to docker hub
+      #    branch: master
+      #    command: $DOCKER_HUB_TRIGGER

@@ -1,19 +1,20 @@
-FROM centos:centos6
+# Use an official Python runtime as a parent image
+FROM python:2.7-slim
 
-MAINTAINER pereric.andree@gmail.com
+# Set the working directory to /app
+WORKDIR /app
 
-# Enable EPEL for Node.js
-RUN rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+# Copy the current directory contents into the container at /app
+COPY . /app
 
-# Install Node...
-RUN yum install -y npm
+# Install any needed packages specified in requirements.txt
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-# Copy app to /src
-COPY . /src
+# Make port 80 available to the world outside this container
+EXPOSE 80
 
-# Install app and dependencies into /src
-RUN cd /src; npm install --no-bin-links
+# Define environment variable
+ENV NAME World
 
-EXPOSE 8080
-
-CMD cd /src && node ./app.js
+# Run app.py when the container launches
+CMD ["python", "app.py"]

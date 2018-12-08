@@ -1,4 +1,3 @@
-FROM resin/armhf-alpine-node
 FROM openjdk:10
 WORKDIR /
 ADD iprincipnufinance.jar iprincipnufinance.jar

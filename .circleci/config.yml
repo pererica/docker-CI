@@ -5,7 +5,7 @@ jobs:
     # container instead of a Linux VM.
     #machine: true # Use a Linux VM instead of docker environment.
     docker:      
-      - image: docker:17.05.0-ce-git #docker:stable-git #circleci/node:7.10 # Specify the version you desire here.  
+      - image: resin/armhf-alpine-node #docker:17.05.0-ce-git #docker:stable-git #circleci/node:7.10 # Specify the version you desire here.  
     #working_directory: ~/repo # Default working directory, where your project will be cloned  .
     steps:
       - checkout # Add a checkout of the repository.
@@ -16,10 +16,6 @@ jobs:
       - setup_remote_docker:
           reusable: true
           exclusive: true
-
-      - run:
-          name: Prepare qemu 
-          command: docker run --rm --privileged multiarch/qemu-user-static:register --reset
 
       - run:
           name: This creates a Docker image, which we’re going to tag using -t so it has a friendly name.
